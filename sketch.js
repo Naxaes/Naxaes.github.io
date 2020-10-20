@@ -6,9 +6,8 @@ let signal   = [];
 let fourierC;
 let stop = false;
 
-const CANVAS_WIDTH  = 650;
-const CANVAS_HEIGHT = 600;
-
+const CANVAS_WIDTH = 1440;
+const CANVAS_HEIGHT = 900;
 
 
 const IMAGE = [
@@ -559,7 +558,6 @@ const IMAGE = [
 ];
 
 
-
 function createFourierSeries(drawing) {
     for (let i = 0; i < drawing.length; i++) {
         const re = drawing[i].x;
@@ -575,7 +573,6 @@ function createFourierSeries(drawing) {
 
 function setup() {
     createCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
-    textSize(14);
 
     for (let i = 0; i < IMAGE.length; i++) {
         IMAGE[i].x -= CANVAS_WIDTH  / 2.0;
@@ -633,8 +630,8 @@ function drawPath(path, v, maxSize) {
 
 function draw() {
     background(0);
-    const epiCycle1Offset = CANVAS_WIDTH  / 2;
-    const epiCycle2Offset = CANVAS_HEIGHT / 2;
+    const epiCycle1Offset = width  / 2;
+    const epiCycle2Offset = height / 2;
 
     let count = fourierC.length;
     let v = drawEpicycles(epiCycle1Offset, epiCycle2Offset, 0, fourierC);

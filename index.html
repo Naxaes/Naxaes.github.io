@@ -269,8 +269,8 @@
 
         #toast.show {
             visibility: visible;
-            -webkit-animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
-            animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+            -webkit-animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+            animation:         fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
         }
 
         @-webkit-keyframes fadein {
@@ -334,12 +334,6 @@
 
 
         function launch_toast() {
-            if (attempts >= prompts.length) {
-                let button = document.getElementById("vote");
-                button.disabled = "disabled";
-                return;
-            }
-
             let toast = document.getElementById("toast")
             toast.className = "show";
 
@@ -347,7 +341,16 @@
             desc.innerText = prompts[attempts];
             attempts += 1;
 
+            let button = document.getElementById("vote");
+            button.disabled = "disabled";
+
             setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 5000);
+            if (attempts < prompts.length) {
+                setTimeout(function(){ button.disabled = ""; }, 5000);
+            } else {
+                button.innerText = "❌";
+            }
+
         }
     </script>
 

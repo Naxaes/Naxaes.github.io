@@ -90,19 +90,17 @@
 
         .column .image-text {
             position: absolute;
-            margin-top: 30%;
-            width: 100%;
+            visibility: visible;
 
-            color: #fff;
+            color: white;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
             opacity: 0;
-            visibility: hidden;
 
             font-weight: 300;
             font-size: 1rem;
             text-align: center;
 
-            top: 50%;
-            transform: translateY(-50%);
             transition: all 0.5s;
             -webkit-transition: all 0.5s;
         }
@@ -123,7 +121,7 @@
             border-radius: 8px;
         }
 
-        .form__input {
+        #form .form__input {
             font-family: 'Roboto', sans-serif;
             color: #333;
             font-size: 1.2rem;
@@ -237,14 +235,15 @@
 
             position: fixed;
             z-index: 1;
-            left: 0;right:0;
+            left: 0;
+            right:0;
             bottom: 30px;
             font-size: 17px;
             white-space: nowrap;
         }
         #toast #img{
             width: 50px;
-            height: 50px;
+            height: 100%;
 
             float: left;
 
@@ -262,11 +261,12 @@
 
             padding: 16px;
 
-            overflow: hidden;
-            white-space: nowrap;
+            overflow: visible;
+            white-space: normal;
         }
 
         #toast.show {
+            text-align: center;
             visibility: visible;
             -webkit-animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
             animation:         fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
@@ -318,6 +318,86 @@
         @keyframes fadeout {
             from {bottom: 30px; opacity: 1;}
             to {bottom: 60px; opacity: 0;}
+        }
+
+
+        @media screen and (max-width: 1200px) {
+            .column {
+                width: 128px;
+                height: 128px;
+            }
+            #header h1 {
+                padding: 24px 0;
+                font-size: 300%;
+            }
+            #header h2 {
+                font-size: 200%;
+            }
+            #form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                margin: 32px 0;
+                padding: 10px;
+            }
+            #form .form__input {
+                font-size: 1.0rem;
+                padding: 1.0rem 1.5rem;
+                margin: 12px 12px;
+                width: auto;
+                text-align: center;
+            }
+            .button-25 {
+                width: auto;
+                margin: 12px 12px;
+            }
+            #toast {
+                font-size: 14px;
+                height: 64px;
+            }
+            #toast #desc {
+                padding: 8px;
+            }
+        }
+        @media screen and (max-width: 800px) {
+            .column {
+                width: 64px;
+                height: 64px;
+            }
+            #header h1 {
+                padding: 12px 0;
+                font-size: 200%;
+            }
+            #header h2 {
+                font-size: 100%;
+            }
+            #form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                margin: 32px 0;
+                padding: 10px;
+            }
+            #form .form__input {
+                font-size: 0.8rem;
+                padding: 1.0rem 1.5rem;
+                margin: 12px 12px;
+                width: auto;
+                text-align: center;
+            }
+            .button-25 {
+                width: auto;
+                margin: 12px 12px;
+            }
+            #toast {
+                font-size: 11px;
+                height: 64px;
+            }
+            #toast #desc {
+                padding: 8px;
+            }
         }
 
     </style>

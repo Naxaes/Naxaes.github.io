@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://use.fontawesome.com/c301710f3d.js"></script>
-    <link rel="stylesheet" href="index.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -327,11 +326,17 @@
     <script>
         var attempts = 0;
         let prompts = [
-            "Att rösta är viktigt, men så är också att tänka. Försök igen.",
-            "Kan du inte ta saker seriöst?",
+            "Att rösta är viktigt, men så är också att tänka. Kanske värt att ge det ett till försök?",
+            "Vi har en representativ demokrati, men det vore bra om vi kunde representera smartare personer...",
             "Ej, vet du vad... Alla bör inte få rösta.",
         ]
 
+
+        function add_vote(x) {
+            console.log(x);
+            let entry = document.getElementById("name")
+            entry.value = x.innerText;
+        }
 
         function launch_toast() {
             let toast = document.getElementById("toast")
@@ -365,7 +370,7 @@
 <div id="partier">
 
     <div class="cards" id="card-section">
-        <div class="column">
+        <div class="column" onclick="add_vote(this)">
             <div class="card">
                 <div class="image">
                     <img src="https://www.riksdagen.se/imagevault/publishedmedia/er4fw1a2219ocputfn6y/logo-s-large.jpg" alt="Socialdemokraternas logotyp">
@@ -376,7 +381,7 @@
             </div>
         </div>
 
-        <div class="column">
+        <div class="column" onclick="add_vote(this)">
             <div class="card">
                 <div class="image">
                     <img src="https://www.riksdagen.se/imagevault/publishedmedia/x92sglqf7u7hukjl1b5t/logo-m-large.jpg" alt="Moderaternas logotyp">
@@ -387,7 +392,7 @@
             </div>
         </div>
 
-        <div class="column">
+        <div class="column" onclick="add_vote(this)">
             <div class="card">
                 <div class="image">
                     <img src="https://www.riksdagen.se/imagevault/publishedmedia/xqhuo0r6r541y5vuehim/logo-sd-large.jpg" alt="Sverigedemokraternas logotyp">
@@ -398,8 +403,8 @@
             </div>
         </div>
 
-        <div class="column">
-            <div class="card">
+        <div class="column" onclick="add_vote(this)">
+            <div class="card" onclick="">
                 <div class="image">
                     <img src="https://www.riksdagen.se/imagevault/publishedmedia/dkwjvy132wai5mhwlids/Centerpartiet_logo_symbol_pos-320x320-luft.jpg" alt="Centerpartiets logotyp">
                     <div class="image-text">
@@ -409,7 +414,7 @@
             </div>
         </div>
 
-        <div class="column">
+        <div class="column" onclick="add_vote(this)">
             <div class="card">
                 <div class="image">
                     <img src="https://www.riksdagen.se/imagevault/publishedmedia/hnrmpvmv0u0fwyi3p1ib/logo-v-large.jpg" alt="Vänsterpartiets logotyp">
@@ -420,7 +425,7 @@
             </div>
         </div>
 
-        <div class="column">
+        <div class="column" onclick="add_vote(this)">
             <div class="card">
                 <div class="image">
                     <img src="https://www.riksdagen.se/imagevault/publishedmedia/6qmuaram0iigfrdeyx65/logo-kd-large.jpg" alt="Kristdemokraternas logotyp">
@@ -431,7 +436,7 @@
             </div>
         </div>
 
-        <div class="column">
+        <div class="column" onclick="add_vote(this)">
             <div class="card">
                 <div class="image">
                     <img src="https://www.riksdagen.se/imagevault/publishedmedia/rrab52c9vrc5ql70uw1u/logo-l-large-ny3.jpg" alt="Liberalernas logotyp">
@@ -442,7 +447,7 @@
             </div>
         </div>
 
-        <div class="column">
+        <div class="column" onclick="add_vote(this)">
             <div class="card">
                 <div class="image">
                     <img src="https://www.riksdagen.se/imagevault/publishedmedia/12g4g4q68jc7lzhnqtpm/logo-mp-large.jpg" alt="Miljöpartiets logotyp">
@@ -461,7 +466,7 @@
 
 <div id="form">
     <input type="text" class="form__input" id="name" placeholder="Vem röstar du på?" required="" />
-    <!-- HTML !-->
+    <label id="vote_label" for="name"></label>
     <button id="vote" class="button-25" role="button" onclick="launch_toast()">Rösta</button>
 
 </div>

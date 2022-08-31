@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Johnny Blower</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!--  NAVBAR  -->
+    <div id="navbar">
+        <div><a id="home-link" href="#" class="active">Johnny Blower</a></div>
+        <ul>
+            <li><a id="contact-link"   href="#team" >Team</a></li>
+            <li><a id="skills-link"    href="#projects">Features</a></li>
+            <li><a id="projects-link"  href="#demo">Demo</a></li>
+        </ul>
+
+        <a id="navbar-link-hamburger" href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+
+    <!--  HERO  -->
+    <div id="hero" style="
+        background:
+            url('static/level_background_2.png'),
+            url('static/level_background_1.png'),
+            url('static/level_background_0.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    ">
+        <div id="hero-content">
+            <img src="static/logo.png" alt="Logo">
+        </div>
+    </div>
+
+    <div id="demo">
+        <h1>DEMO VIDEO</h1>
+        <div id="demo-link"><a href="https://drive.google.com/drive/folders/1s_l7OJX-11NAb8rWTdDSn-mCSw3-76pw?usp=sharing" target="_blank">DOWNLOAD THE GAME</a></div>
+        <video autoplay muted loop controls>
+            <source src="static/demo-video.webm" type="video/webm">
+            <source src="static/demo-video-web.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <p>A physics based 2D-platformer game developed in Unity2D where the main character Johnny Blower has been swallowed whole by a huge monster. The player assumes the role of leaf blower wielding Johnny and needs to use this single tool to blow enemies, acid, and projectiles around in order to overcome obstacles. Interact with the environment, slay enemies, and find clever ways to propel Johnny out of the stomach.</p>
+    </div>
+
+
+    <!--  PROJECTS  -->
+    <div id="projects">
+        <h1>FEATURES</h1>
+        <h2>Here's what you can do!</h2>
+
+        <div class="cards" id="card-section">
+            
+        <div class="column">
+            <div class="card">
+                <div class="image">
+                    <img src="static/blowing-acid.png" alt="Blowing acid">
+                    <div class="project-text">
+                        <h2>Blow Acid</h2>
+                        <p>Blow acid on enemies or to give yourself a path to new areas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="image">
+                    <img src="static/blowing-enemies.png" alt="Blowing enemies">
+                    <div class="project-text">
+                        <h2>Blow Enemies</h2>
+                        <p>Blow away enemies and their projectiles to avoid damage and maybe do some damage of your own.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="image">
+                    <img src="static/blowing-jet.png" alt="Blowing jet">
+                    <div class="project-text">
+                        <h2>Use Jets</h2>
+                        <p>Use the jets to propel yourself even higher!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="image">
+                    <img src="static/flying-enemy.png" alt="Flying enemy">
+                    <div class="project-text">
+                        <h2>Flying Enemies</h2>
+                        <p>Look out for sky-borne enemies attacking you from above.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="image">
+                    <img src="static/spikes.png" alt="Spikes">
+                    <div class="project-text">
+                        <h2>Spikes</h2>
+                        <p>Spikes are scattered around the environment. Make sure to not get hurt!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="image">
+                    <img src="static/exit.png" alt="Exit">
+                    <div class="project-text">
+                        <h2>Exit</h2>
+                        <p>Find your way to the next level.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+    </div>
+
+
+    <!--  Skills  -->
+    <h1 id="team" style="text-align: center; padding-top: 128px">THE TEAM</h1>
+    <div id="skills">
+
+        <div class="skill">
+            <img src="static/ted.jpg" alt="Ted Klein Bergman">
+            <h2>Ted Klein Bergman</h2>
+            <p>Project leader and lead programmer of the blowing mechanic and liquid acid system.</p>
+            <ul>
+                <li><div class="mail-button"><a href="mailto:tedber@kth.se?subject=Hi! Great game! I'm contacting you for..." target="_blank">tedber@kth.se</a></div></li>
+                <li><div class="mail-button"><a href="https://www.linkedin.com/in/ted-klein-bergman-93201271/" target="_blank">linkedin.com</a></div></li>
+            </ul>
+        </div>
+
+
+        <div class="skill">
+            <img src="static/karl.jpg" alt="Karl Brunnberg">
+            <h2>Karl Brunnberg</h2>
+            <p>Lead programmer of enemies, their movement, projectile shooting and AI. Level designer.</p>
+            <ul>
+                <li><div class="mail-button"><a href="mailto:karlbru@kth.se?subject=Hi! Great game! I'm contacting you for..." target="_blank">karlbru@kth.se</a></div></li>
+                <li><div class="mail-button"><a href="https://linkedin.com/in/karlbrunnberg/" target="_blank">linkedin.com</a></div></li>
+            </ul>
+        </div>
+
+        <div class="skill">
+            <img src="static/ryan.jpg" alt="Yuanyang Ren">
+            <h2>Yuanyang Ren</h2>
+            <p> Designer of assets, character sprites and animations, and level designer.</p>
+            <ul>
+                <li><div class="mail-button"><a href="mailto:yren@kth.se?subject=Hi! Great game! I'm contacting you for..." target="_blank">yren@kth.se</a></div></li>
+                <li><div class="mail-button"><a href="https://www.linkedin.com/in/ryan-ren-b08594234/" target="_blank">linkedin.com</a></div></li>
+            </ul>
+        </div>
+
+        <div class="skill">
+            <img src="static/isak.jpg" alt="Isak Sundström">
+            <h2>Isak Sundström</h2>
+            <p>Programmer of character movement.</p>
+            <ul>
+                <li><div class="mail-button"><a href="mailto:isaksun@kth.se?subject=Hi! Great game! I'm contacting you for..." target="_blank">isaksun@kth.se</a></div></li>
+                <li><div class="mail-button"><a href="https://www.linkedin.com/in/isak-sundstr%C3%B6m-752780171/" target="_blank">linkedin.com</a></div></li>
+            </ul>
+        </div>
+
+        <div class="skill">
+            <img src="static/edvard.png" alt="Edvard Ahlsen">
+            <h2>Edvard Ahlsen</h2>
+            <p>Designer of tilemaps, assets and parallax backgrounds.</p>
+            <ul>
+                <li><div class="mail-button"><a href="mailto:edvarda@kth.se?subject=Hi! Great game! I'm contacting you for..." target="_blank">edvarda@kth.se</a></div></li>
+                <li><div class="mail-button"><a href="https://www.linkedin.com/in/edvardahlsen" target="_blank">linkedin.com</a></div></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <footer>
+        <img src="static/footer.png" width="100%" alt="Footer">
+    </footer>
+
+</body>
+<script src="index.js"></script>
+</html>
